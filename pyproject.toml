@@ -1,0 +1,42 @@
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python="^3.12"
+django = "^5.1.2"
+djangorestframework = "^3.15.2"
+psycopg = "^3.2.3"
+ruff = "^0.7.2"
+pillow = "^11.0.0"
+django-cleanup = "^9.0.0"
+django-cors-headers = "^4.6.0"
+
+[tool.ruff]
+exclude = [
+    "manage.py",
+    "migrations"
+]
+
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D100",
+    "D101",
+    "D102",
+    "D104",
+    "D106",
+    "D203",
+    "D211",
+    "D212",
+    "COM812",
+    "ISC001",
+    "RUF012",
+    "ANN401",
+    "ERA001",
+    "TRY002",
+]
+
+fixable = ["ALL"]
