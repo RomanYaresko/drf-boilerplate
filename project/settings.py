@@ -7,9 +7,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG") == "true"
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["localhost"]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:5000"]
+CORS_ALLOWED_ORIGINS = [f"http://localhost:{os.getenv("FRONTEND_PORT")}"]
 
 FIRST_PARTY_APPS = [
     "user.apps.UserConfig",
